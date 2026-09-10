@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireConnect | Enterprise Talent & Career Platform</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <span class="logo-text">Hire<span>Connect</span></span>
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#jobs" class="nav-link active">Jobs</a></li>
+        <li><a href="#companies" class="nav-link">Companies</a></li>
+
+      </ul>
+
+
+      <div class="nav-actions">
+        <div class="login-container" id="loginContainer">
+
+          <a href="employer-login.html" class="dropdown-item">
+            <div class="icon-box employer-icon">
+              <i class="fa-solid fa-building-user"></i>
+            </div>
+            <div class="item-text">
+              <strong>Employer / Recruiter</strong>
+              <span>Publish listings & source vetted talent</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-body">
+    <!-- Hero / CTA Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-pill">
+        </div>
+        <h3 class="hero-subtitle">Accelerate your career trajectory. Discover high-impact engineering, design, and
+          leadership opportunities tailored to your expertise.</h3>
+
+        <div class="hero-cta-group">
+          <a href="Employe.html" class="btn-primary-hero">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Register for Free</span>
+          </a>
+          <a href="#companies" class="btn-secondary-hero">
+            <span>Explore Companies</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section id="jobs" class="section-container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Featured Opportunities</span>
+          <h2 class="section-title">Current Openings</h2>
+        </div>
+        <a href="#" class="view-all-link">View All Jobs <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+
+      <div class="jobs-grid">
+        <!-- Job Card 1 -->
+        <article class="job-card">
+          <div class="job-card-top">
+            <div class="company-badge-icon techcorp">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
+              <span class="company-name">TechCorp Solutions</span>
+              <h3 class="job-title">Senior Frontend Engineer</h3>
+            </div>
+          </div>
+
+          <div class="job-meta-pills">
+            <span class="pill"><i class="fa-solid fa-location-dot"></i> Bengaluru (Hybrid)</span>
+            <span class="pill"><i class="fa-solid fa-briefcase"></i> 3+ Years Exp</span>
+            <span class="pill highlight"><i class="fa-solid fa-wallet"></i> ₹18 - 25 LPA</span>
+          </div>
+
+          <div class="job-details">
+            <h4>Key Responsibilities:</h4>
+            <ul>
+              <li>Build responsive, high-performance web apps using React and TypeScript.</li>
+              <li>Collaborate with cross-functional teams to integrate RESTful APIs.</li>
+              <li>Optimize UI components for speed, accessibility, and cross-browser stability.</li>
+            </ul>
+          </div>
+
+          <div class="job-card-footer">
+            <a href="Employe.html" class="btn-apply-card">Quick Apply</a>
+          </div>
+        </article>
+
+        <!-- Job Card 2 -->
+        <article class="job-card">
+          <div class="job-card-top">
+            <div class="company-badge-icon nexus">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <div>
+              <span class="company-name">Nexus Labs</span>
+              <h3 class="job-title">UI/UX Product Designer</h3>
+            </div>
+          </div>
+
+          <div class="job-meta-pills">
+            <span class="pill"><i class="fa-solid fa-location-dot"></i> Mumbai (On-site)</span>
+            <span class="pill"><i class="fa-solid fa-briefcase"></i> 2+ Years Exp</span>
+            <span class="pill highlight"><i class="fa-solid fa-wallet"></i> ₹12 - 18 LPA</span>
+          </div>
+
+          <div class="job-details">
+            <h4>Key Responsibilities:</h4>
+            <ul>
+              <li>Create detailed wireframes, user flows, and interactive Figma prototypes.</li>
+              <li>Conduct structured usability testing and iterate on qualitative feedback.</li>
+              <li>Maintain and systematically scale internal design token systems.</li>
+            </ul>
+          </div>
+
+          <div class="job-card-footer">
+            <a href="Employe.html" class="btn-apply-card">Quick Apply</a>
+          </div>
+        </article>
+
+        <!-- Job Card 3 -->
+        <article class="job-card">
+          <div class="job-card-top">
+            <div class="company-badge-icon synapse">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div>
+              <span class="company-name">Synapse AI</span>
+              <h3 class="job-title">Backend Python Developer</h3>
+            </div>
+          </div>
+
+          <div class="job-meta-pills">
+            <span class="pill"><i class="fa-solid fa-globe"></i> Remote</span>
+            <span class="pill"><i class="fa-solid fa-briefcase"></i> 4+ Years Exp</span>
+            <span class="pill highlight"><i class="fa-solid fa-wallet"></i> ₹16 - 24 LPA</span>
+          </div>
+
+          <div class="job-details">
+            <h4>Key Responsibilities:</h4>
+            <ul>
+              <li>Design and maintain high-throughput microservices using FastAPI.</li>
+              <li>Manage PostgreSQL databases, caching layers, and task queues.</li>
+              <li>Containerize distributed services with Docker and Kubernetes pipelines.</li>
+            </ul>
+          </div>
+
+          <div class="job-card-footer">
+            <a href="Employe.html" class="btn-apply-card">Quick Apply</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="section-container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Hiring Partners</span>
+          <h2 class="section-title">Top Companies & Open Positions</h2>
+        </div>
+      </div>
+
+      <div class="companies-container">
+        <!-- Company 1 -->
+        <article class="company-card">
+          <div class="company-header">
+            <div class="company-brand">
+              <div class="company-logo techcorp">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="company-info-text">
+                <h3 class="company-title">TechCorp Solutions</h3>
+                <p class="company-meta-info">
+                  <span><i class="fa-solid fa-building"></i> Enterprise Tech</span>
+                  <span><i class="fa-solid fa-location-dot"></i> Bengaluru, IN</span>
+                  <span class="rating"><i class="fa-solid fa-star"></i> 4.6 (1.2k)</span>
+                </p>
+              </div>
+            </div>
+            <span class="open-positions-badge">3 Openings</span>
+          </div>
+
+          <div class="company-jobs-list">
+            <div class="company-job-item">
+              <div class="job-info">
+                <h4 class="job-name">Senior Frontend Engineer</h4>
+                <div class="job-tags">
+                  <span class="tag">Full-time</span>
+                  <span class="tag">Hybrid</span>
+                  <span class="tag-salary">₹18 - 25 LPA</span>
+                </div>
+              </div>
+              <a href="Employe.html" class="btn-apply">Apply</a>
+            </div>
+
+            <div class="company-job-item">
+              <div class="job-info">
+                <h4 class="job-name">DevOps / Cloud Architect</h4>
+                <div class="job-tags">
+                  <span class="tag">Full-time</span>
+                  <span class="tag">On-site</span>
+                  <span class="tag-salary">₹22 - 30 LPA</span>
+                </div>
+              </div>
+              <a href="Employe.html" class="btn-apply">Apply</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Company 2 -->
+        <article class="company-card">
+          <div class="company-header">
+            <div class="company-brand">
+              <div class="company-logo nexus">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="company-info-text">
+                <h3 class="company-title">Nexus Labs</h3>
+                <p class="company-meta-info">
+                  <span><i class="fa-solid fa-building"></i> Design & SaaS</span>
+                  <span><i class="fa-solid fa-location-dot"></i> Mumbai, IN</span>
+                  <span class="rating"><i class="fa-solid fa-star"></i> 4.8 (850)</span>
+                </p>
+              </div>
+            </div>
+            <span class="open-positions-badge">2 Openings</span>
+          </div>
+
+          <div class="company-jobs-list">
+            <div class="company-job-item">
+              <div class="job-info">
+                <h4 class="job-name">UI/UX Product Designer</h4>
+                <div class="job-tags">
+                  <span class="tag">Full-time</span>
+                  <span class="tag">Remote</span>
+                  <span class="tag-salary">₹12 - 18 LPA</span>
+                </div>
+              </div>
+              <a href="Employe.html" class="btn-apply">Apply</a>
+            </div>
+
+            <div class="company-job-item">
+              <div class="job-info">
+                <h4 class="job-name">Design Systems Lead</h4>
+                <div class="job-tags">
+                  <span class="tag">Full-time</span>
+                  <span class="tag">Hybrid</span>
+                  <span class="tag-salary">₹20 - 28 LPA</span>
+                </div>
+              </div>
+              <a href="Employe.html" class="btn-apply">Apply</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Company 3 -->
+        <article class="company-card">
+          <div class="company-header">
+            <div class="company-brand">
+              <div class="company-logo synapse">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div class="company-info-text">
+                <h3 class="company-title">Synapse AI</h3>
+                <p class="company-meta-info">
+                  <span><i class="fa-solid fa-building"></i> Artificial Intelligence</span>
+                  <span><i class="fa-solid fa-globe"></i> Remote / Global</span>
+                  <span class="rating"><i class="fa-solid fa-star"></i> 4.9 (420)</span>
+                </p>
+              </div>
+            </div>
+            <span class="open-positions-badge">1 Opening</span>
+          </div>
+
+          <div class="company-jobs-list">
+            <div class="company-job-item">
+              <div class="job-info">
+                <h4 class="job-name">Backend Python Developer</h4>
+                <div class="job-tags">
+                  <span class="tag">Full-time</span>
+                  <span class="tag">100% Remote</span>
+                  <span class="tag-salary">₹16 - 24 LPA</span>
+                </div>
+              </div>
+              <a href="Employe.html" class="btn-apply">Apply</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon small">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <span class="logo-text">Hire<span>Connect</span></span>
+        </div>
+        <p>Connecting elite professionals with forward-thinking enterprises worldwide.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 HireConnect Inc. All rights reserved.</span>
+        <span>Support: 1-222-111-1111</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

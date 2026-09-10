@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: navy;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+
+        .card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 480px;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(13, 71, 161, 0.15);
+            border: 1px solid #e1f5fe;
+            animation: slideIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h2 {
+            color: #0d47a1;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #1976d2;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #1565c0;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid #90caf9;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #0d47a1;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #1976d2;
+            box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.18);
+        }
+
+        /* File Upload Button Styling */
+        input[type="file"]::file-selector-button {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            border: 1px solid #90caf9;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 12px;
+            transition: all 0.2s ease;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background-color: #1976d2;
+            color: #ffffff;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        /* Submit Button Wrapper with Floating Popup Tooltip */
+        .submit-wrapper {
+            position: relative;
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .submit-wrapper .popup-tip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 125%;
+            background-color: #0d47a1;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: 6px;
+            white-space: nowrap;
+            box-shadow: 0 6px 14px rgba(13, 71, 161, 0.25);
+            transform: translateY(8px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+        }
+
+        .submit-wrapper .popup-tip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #0d47a1 transparent transparent transparent;
+        }
+
+        .submit-wrapper:hover .popup-tip {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #1976d2;
+            color: #ffffff;
+            border: none;
+            padding: 13px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(13, 71, 161, 0.4);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(13, 71, 161, 0.2);
+        }
+
+        input[type="reset"] {
+            flex: 1;
+            background-color: #ffffff;
+            color: #1976d2;
+            border: 1.5px solid #1976d2;
+            padding: 13px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #e3f2fd;
+            border-color: #0d47a1;
+            color: #0d47a1;
+            transform: translateY(-2px);
+        }
+
+        input[type="reset"]:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Candidate Registration</h2>
+
+        <form action="Form.php" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="tel" id="number" name="number" pattern="[0-9]{10}" placeholder="10-digit number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Hackathon@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Resume (PDF only, max 5MB)</label>
+                <input type="file" id="resume" name="resume" accept="application/pdf,.pdf" required>
+            </div>
+
+            <div class="button-group">
+                <div class="submit-wrapper">
+                    <span class="popup-tip">Ready to submit application?</span>
+                    <input type="submit" value="Submit">
+                </div>
+                <input type="reset" value="Clear">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

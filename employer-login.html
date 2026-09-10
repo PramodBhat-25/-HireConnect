@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employer Sign In | HireConnect</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="employer-style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="employer-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>HireConnect <small>For Employers</small></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Centered Login Container -->
+  <main class="portal-container">
+    <div class="portal-card">
+      <section class="form-section">
+        <div class="form-header">
+          <h2>Employer Sign In</h2>
+          <p>Access your recruiter dashboard, manage postings, and search candidates.</p>
+        </div>
+
+        <!-- Single Sign-On (SSO) Options -->
+        <div class="sso-buttons">
+          <button type="button" class="btn-sso">
+            <i class="fa-brands fa-linkedin text-linkedin"></i>
+            <span>LinkedIn</span>
+          </button>
+          <button type="button" class="btn-sso">
+            <i class="fa-brands fa-google text-google"></i>
+            <span>Google Work</span>
+          </button>
+        </div>
+
+        <div class="divider">
+          <span>or sign in with work email</span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="employerLoginForm">
+          <div class="input-group">
+            <label for="workEmail">Work Email Address</label>
+            <div class="input-field">
+              <i class="fa-regular fa-envelope input-icon"></i>
+              <input type="email" id="workEmail" placeholder="name@company.com" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" class="forgot-pass">Forgot password?</a>
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input type="password" id="password" placeholder="Enter your password" required />
+              <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe" checked />
+              <span class="custom-checkbox"></span>
+              Keep me logged in on this device
+            </label>
+          </div>
+          <button type="submit" class="btn-submit" onclick="window.location.href='dashboard.html'">
+            Sign in
+          </button> 
+        </form>
+
+        <div class="form-footer">
+          <p>New employer on HireConnect?</p>
+          <a href="#register" class="link-bold">Create a Free Recruiter Account</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  
+</body>
+</html>
